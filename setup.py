@@ -41,7 +41,7 @@ setuptools.setup(
     url=metadata.get('__url__'),
     copyright=metadata.get('__copyright__'),
     packages=setuptools.find_packages(),
-    python_requires='~=3',
+    python_requires='~=3.0',
     classifiers=(
         'Programming Language :: Python :: 3',
         'Intended Audience :: Developers',
