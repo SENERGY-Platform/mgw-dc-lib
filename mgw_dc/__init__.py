@@ -18,7 +18,7 @@
 __version__ = '0.0.1'
 __title__ = 'mgw-dc-lib'
 __description__ = ''
-__url__ = ''
+__url__ = 'https://github.com/SENERGY-Platform/mgw-dc-lib'
 __author__ = 'Yann Dumont'
 __license__ = 'Apache License 2.0'
 __copyright__ = 'Copyright 2020 InfAI (CC SES)'
