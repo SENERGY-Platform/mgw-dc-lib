@@ -15,7 +15,7 @@
 """
 
 
-__all__ = ("gen_device_topic", "gen_last_will_topic", "gen_set_device_msg", "gen_delete_device_msg")
+__all__ = ("gen_device_topic", "gen_last_will_topic", "gen_refresh_topic", "gen_set_device_msg", "gen_delete_device_msg")
 
 
 from .. import _model as model
@@ -30,6 +30,10 @@ def gen_device_topic(dc_id: str) -> str:
 
 def gen_last_will_topic(dc_id: str) -> str:
     return model.Topics.dm_lw.format(dc_id=validate_instance(dc_id, str))
+
+
+def gen_refresh_topic() -> str:
+    return model.Topics.dm_refresh
 
 
 def gen_set_device_msg(device: Device) -> typing.Dict:
