@@ -34,8 +34,8 @@ class Message:
 
 
 class Topics:
-    dm = "device/{dc_id}"
-    dm_lw = "device/{dc_id}/lw"
+    dm = "device-manager/device/{dc_id}"
+    dm_lw = "device-manager/device/{dc_id}/lw"
     dm_refresh = "device-manager/refresh"
     comms_event = "event/{device_id}/{service_id}"
     comms_command = "command/{device_id}/{service_id}"
