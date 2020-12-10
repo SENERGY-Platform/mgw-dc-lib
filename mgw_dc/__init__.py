@@ -15,9 +15,9 @@
 """
 
 
-__version__ = '0.0.1'
+__version__ = '0.1.0'
 __title__ = 'mgw-dc-lib'
-__description__ = ''
+__description__ = 'Helper library for device-connectors.'
 __url__ = 'https://github.com/SENERGY-Platform/mgw-dc-lib'
 __author__ = 'Yann Dumont'
 __license__ = 'Apache License 2.0'
