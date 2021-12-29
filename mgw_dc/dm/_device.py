@@ -14,12 +14,11 @@
    limitations under the License.
 """
 
-
 __all__ = ("Device", "device_state")
 
+import typing
 
 from .._util import validate_instance
-import typing
 
 
 class device_state:
@@ -28,9 +27,11 @@ class device_state:
 
 
 class Device:
-    def __init__(self, id: str, name: str, type: str, state: typing.Optional[str] = None):
+    def __init__(self, id: str, name: str, type: str, state: typing.Optional[str] = None,
+                 attributes: typing.Optional[typing.List[typing.Dict]] = None):
         self.__id = validate_instance(id, str)
         self.__type = validate_instance(type, str)
+        self.__attributes = attributes
         self.name = name
         self.state = state
 
@@ -62,14 +63,20 @@ class Device:
             err = "undefined state '{}'".format(arg)
             raise ValueError(err)
 
+    @property
+    def attributes(self) -> typing.Optional[typing.List[typing.Dict]]:
+        return self.__attributes
+
     def __str__(self, **kwargs):
-        attributes = [
+        properties = [
             ('id', repr(self.id)),
             ('name', repr(self.name)),
             ('state', repr(self.state)),
-            ('type', repr(self.type))
+            ('type', repr(self.type)),
+            ('attributes', repr(self.attributes))
         ]
         if kwargs:
             for arg, value in kwargs.items():
-                attributes.append((arg, value))
-        return "{}({})".format(self.__class__.__name__, ", ".join(["=".join([key, str(value)]) for key, value in attributes]))
+                properties.append((arg, value))
+        return "{}({})".format(self.__class__.__name__,
+                               ", ".join(["=".join([key, str(value)]) for key, value in properties]))

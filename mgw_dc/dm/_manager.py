@@ -44,7 +44,8 @@ def gen_set_device_msg(device: Device) -> typing.Dict:
         model.Message.data: {
             model.Message.Data.name: device.name,
             model.Message.Data.state: device.state,
-            model.Message.Data.device_type: device.type
+            model.Message.Data.device_type: device.type,
+            model.Message.Data.attributes: device.attributes,
         }
     }
 

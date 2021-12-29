@@ -31,6 +31,7 @@ class Message:
         name = "name"
         state = "state"
         device_type = "device_type"
+        attributes = "attributes"
 
 
 class Topics:
