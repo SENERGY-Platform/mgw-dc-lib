@@ -17,9 +17,12 @@
 from ._command import *
 from ._response import *
 from ._event import *
+from ._error import *
+
 
 __all__ = (
     _command.__all__,
     _response.__all__,
-    _event.__all__
+    _event.__all__,
+    _error.__all__
 )

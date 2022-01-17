@@ -41,4 +41,6 @@ class Topics:
     comms_event = "event/{device_id}/{service_id}"
     comms_command = "command/{device_id}/{service_id}"
     comms_response = "response/{device_id}/{service_id}"
-
+    comms_err_client = "error/client"
+    comms_err_device = "error/device/{device_id}"
+    comms_err_command = "error/command/{correlation_id}"
