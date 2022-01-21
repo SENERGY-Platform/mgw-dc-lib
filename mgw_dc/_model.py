@@ -44,3 +44,8 @@ class Topics:
     comms_err_client = "error/client"
     comms_err_device = "error/device/{device_id}"
     comms_err_command = "error/command/{correlation_id}"
+
+
+class DeviceAttribute:
+    key = "key"
+    value = "value"
