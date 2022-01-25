@@ -14,7 +14,7 @@
    limitations under the License.
 """
 
-__all__ = ("Device", "device_state")
+__all__ = ("Device", "device_state", "gen_attribute")
 
 import typing
 
