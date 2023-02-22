@@ -55,5 +55,4 @@ def gen_delete_device_msg(device: Device) -> typing.Dict:
     return {
         model.Message.method: model.Method.delete,
         model.Message.device_id: device.id,
-        model.Message.data: None
     }
